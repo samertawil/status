@@ -1,0 +1,19 @@
+{
+    "name": "status/pkg",
+    "description": "my custome status system",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "status\\Pkg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "samer tawil",
+            "email": "eng.samertawil@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
