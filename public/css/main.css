@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Droid';
      
-        src:url(/font/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf);
+        src:url(/public/vendor/StatusModule/font/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf);
         
 }
 body {
@@ -10,8 +10,7 @@ body {
     margin: 0;
     font-family: 'Droid','Courier New', Courier, monospace !important;
     background-color:#f7f7f7 !important;
-    /* background-color:#ebeacc !important; */
-    /* background-color:#e6e5e1 !important; */
+
 }
 
 td{
