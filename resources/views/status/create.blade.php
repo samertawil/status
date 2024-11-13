@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.jqueryui.min.css">
+    
+ 
+    <link href="{{asset('vendor/StatusModule/css/bootstrap.rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/StatusModule/css/dataTables.dataTables.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/StatusModule/css/all.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/StatusModule/css/main.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/StatusModule/css/screenMediaCss.css')}}" rel="stylesheet">
+   <link href="{{asset('vendor/StatusModule/css/adminlte.min.css')}}" rel="stylesheet">
 
  </head>
+
  <body>
     @include('StatusModule::status.layouts._alert-session')
 
@@ -202,13 +209,23 @@
     </section>
  
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
- 
+    <script src="{{asset('vendor/StatusModule/js/jquery.min.js')}}"></script>
+    <script src="{{asset('vendor/StatusModule/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('vendor/StatusModule/js/dataTables.js')}}"></script>
 
-    @include('StatusModule::status.layouts._datatable')
+
+
+    <script>
  
+        let table = new DataTable('#mytable', {
+            order: [ 'desc'],
+            "bProcessing": true,
+            "sAutoWidth": false,
+        "bDestroy":true,
+               
+            
+    });
+    </script>
  </body>
  </html>
 

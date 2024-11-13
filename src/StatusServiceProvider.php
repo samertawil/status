@@ -33,12 +33,12 @@ class StatusServiceProvider extends ServiceProvider
         );
 
         $this->publishes(
-            [__DIR__ . '/../resources/views/status' => resource_path('views/vendor/status'),],
+            [__DIR__ . '/../resources/views/status' => resource_path('views/status'),],
             'views'
         );
 
         $this->publishes(
-            [__DIR__ . '/../lang/ar/statuCustomeTrans.php' => lang_path('statuCustomeTrans.php'),],
+            [__DIR__ . '/../lang/ar/statuCustomeTrans.php' => lang_path('ar/statuCustomeTrans.php'),],
             'lang'
         );
     }
