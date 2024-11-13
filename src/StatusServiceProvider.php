@@ -20,7 +20,7 @@ class StatusServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../migrations');
         $this->loadViewsFrom(__DIR__ . '/../resources/views/', 'StatusModule');
         $this->loadTranslationsFrom(__DIR__ . '/../lang', 'statuCustomeTrans');
-        // $this->mergeConfigFrom(__DIR__.'/../config','status');
+        $this->mergeConfigFrom(__DIR__.'/../config','status');
 
         $this->publishes(
             [__DIR__ . '/../public' => public_path('vendor/StatusModule'),],
@@ -33,8 +33,13 @@ class StatusServiceProvider extends ServiceProvider
         );
 
         $this->publishes(
-            [__DIR__ . '/../resources/views/status' => public_path('views/vendor/status'),],
+            [__DIR__ . '/../resources/views/status' => resource_path('views/vendor/status'),],
             'views'
+        );
+
+        $this->publishes(
+            [__DIR__ . '/../lang/ar/statuCustomeTrans.php' => lang_path('statuCustomeTrans.php'),],
+            'lang'
         );
     }
 }
