@@ -10,9 +10,9 @@
 
  </head>
  <body>
-    @include('StatusModule::layouts._alert-session')
+    @include('StatusModule::status.layouts._alert-session')
 
-    @include('StatusModule::layouts._error-form')
+    @include('StatusModule::status.layouts._error-form')
     <section class="container my-2">
 
         <a  data-toggle="collapse" href="#collapse-system" aria-expanded="true" aria-controls="collapse-system"
@@ -33,19 +33,19 @@
 
                         @csrf
                         <div class=" form-group px-2">
-                            <label for="system_name_id">{{__('mytrans.system_name')}}</label>
+                            <label for="system_name_id">{{__('statuCustomeTrans.system_name')}}</label>
                             <input name="system_name" type="text"  value="{{old('system_name')}}" @class(['form-control', 'is-invalid' => $errors->has('system_name')]) id="system_name_id"
                                 title="اسماء الانظمة الرئيسة المشغولة بهذا البرنامج">
-                            @include('StatusModule::layouts._show-error', ['field_name' => 'system_name'])
+                            @include('StatusModule::status.layouts._show-error', ['field_name' => 'system_name'])
                         </div>
                         <div class="  form-group px-2">
-                            <label for="description_id">{{(__('mytrans.description'))}}</label>
+                            <label for="description_id">{{(__('statuCustomeTrans.description'))}}</label>
                             <input name="description" type="text"  value="{{old('description')}}"  @class(['form-control', 'is-invalid' => $errors->has('description')]) id="description_id" title="شرح بسيط عن النظام">
-                            @include('StatusModule::layouts._show-error', ['field_name' => 'description'])
+                            @include('StatusModule::status.layouts._show-error', ['field_name' => 'description'])
                         </div>
                     </div>
                     <div>
-                        @include('StatusModule::layouts.2button')
+                        @include('StatusModule::status.layouts.2button')
                     </div>
 
             </div>
@@ -58,9 +58,9 @@
                 <table class="table  my-5">
                     <thead>
                         <th>#</th>
-                        <th>{{__('mytrans.system_name')}}</th>
+                        <th>{{__('statuCustomeTrans.system_name')}}</th>
                         <th>حالة النظام</th>
-                        <th>{{__('mytrans.description')}}</th>
+                        <th>{{__('statuCustomeTrans.description')}}</th>
                     </thead>
                     <tbody>
 
@@ -102,7 +102,7 @@
                 <div class="form-group px-2 ">
                     <label for="status_name_id" style="text-align:right !important;">اسم الثابت</label>
                     <input name="status_name" type="text" @class(['form-control', 'is-invalid' => $errors->has('status_name')]) id="status_name_id">
-                    @include('StatusModule::layouts._show-error', ['field_name' => 'status_name'])
+                    @include('StatusModule::status.layouts._show-error', ['field_name' => 'status_name'])
                 </div>
 
 
@@ -167,7 +167,7 @@
 
             </div>
             <div class="container px-0">
-                @include('StatusModule::layouts.2button')
+                @include('StatusModule::status.layouts.2button')
             </div>
 
         </form>
@@ -207,7 +207,7 @@
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
  
 
-    @include('StatusModule::layouts._datatable')
+    @include('StatusModule::status.layouts._datatable')
  
  </body>
  </html>

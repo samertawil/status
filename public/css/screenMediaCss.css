@@ -1,0 +1,6 @@
+ 
+        @media (min-width:991px) {
+            .table_direction {
+                direction: ltr !important;
+            }
+        }
